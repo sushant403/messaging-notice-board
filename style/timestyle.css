@@ -1,0 +1,125 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #151515;
+  /* Adjust font size to to change clock size */
+  font: 300%/1.5em "Droid Sans Mono", monospace;
+  text-align: center;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.clock {
+  background: #000;
+  border: 1px solid #000;
+  box-shadow: 0 0 0 1px #333;
+  display: inline-block;
+  margin: 100px 0 0 0;
+  height: 1.5em;
+  /* Remove the line below to see behind the curtain */
+  overflow: hidden;
+}
+
+.clock .col {
+  background: linear-gradient(#222222 0%, #383838 50%, #222222 100%);
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  float: left;
+  height: 100%;
+  margin: 0 1px 0 0;
+  position: relative;
+}
+
+.clock .col:last-child {
+  margin: 0;
+}
+
+.clock .col:before {
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.clock span {
+  color: #fff;
+  display: block;
+  width: 1em;
+  word-break: break-all;
+  word-break: break-word;
+}
+
+.clock .d,
+.clock .per {
+  position: relative;
+  top: 0;
+  transition: top 500ms ease-out;
+}
+
+.clock .d:before {
+  content: " 0 1 2 3 4 5 6 7 8 9 ";
+}
+
+.clock .d1 {
+  top: -1.5em;
+}
+
+.clock .d2 {
+  top: -3em;
+}
+
+.clock .d3 {
+  top: -4.5em;
+}
+
+.clock .d4 {
+  top: -6em;
+}
+
+.clock .d5 {
+  top: -7.5em;
+}
+
+.clock .d6 {
+  top: -9em;
+}
+
+.clock .d7 {
+  top: -10.5em;
+}
+
+.clock .d8 {
+  top: -12em;
+}
+
+.clock .d9 {
+  top: -13.5em;
+}
+
+.clock .c,
+.clock .per {
+  color: #777;
+  font-size: 0.5em;
+}
+
+.clock .c {
+  width: 0.7em;
+}
+
+.clock .per {
+  width: 2em;
+}
+
+.clock .per:before {
+  content: " AM PM ";
+}
+
+.clock .per.pm {
+  top: -3em;
+}
